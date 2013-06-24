@@ -9,6 +9,20 @@ COMPLIMENTS = [
   '8 out of 10 co-workers agree your desk is the cleanest.'
 ]
 
+INSULTS = [
+  'You fat.',
+  'You really fat',
+  'Seriously, you are fat.'
+]
+
 get '/' do
+  'Hello World'
+end
+
+get '/compliments' do
   COMPLIMENTS.sample
+end
+
+get '/insults' do
+  INSULTS.sample
 end
