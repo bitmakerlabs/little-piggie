@@ -58,8 +58,10 @@ get '/fancy-insults' do
 end
 
 get '/piglatin/:word' do
-  word = params[:word]
-  word =~ /^([^aeiou]+)(.+)/i
+  @word = params[:word]
+  @word =~ /^([^aeiou]+)(.+)/i
 
-  @result = ($1 ? $2 + $1 + "ay" : word + "ay")
+  @result = ($1 ? $2 + $1 + "ay" : @word + "ay")
+
+  erb :piglatinized, :layout => :app
 end
