@@ -34,3 +34,7 @@ end
 get '/goodbye/:name' do
   "Goodbye, #{params[:name]}!"
 end
+
+get '/template' do
+  erb :index
+end
