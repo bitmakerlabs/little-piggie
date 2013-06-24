@@ -26,3 +26,7 @@ end
 get '/insults' do
   INSULTS.sample
 end
+
+get '/hello' do
+  "Hello, #{params[:name]}"
+end
