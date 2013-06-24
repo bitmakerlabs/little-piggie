@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>You fancy now!</title>
+    <style>
+      html, body {
+        height: 100%;
+        position: relative;
+      }
+      .compliment {
+        font-family: sans-serif;
+        font-size: 3em;
+        line-height: 1em;
+        position: absolute;
+        top: 40%;
+        width: 100%;
+      }
+
+      p {
+        width: 50%;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="compliment">
+      <p><%= @compliment %></p>
+    </div>
+  </body>
+</html>

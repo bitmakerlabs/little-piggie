@@ -42,3 +42,9 @@ end
 get '/template' do
   erb :index
 end
+
+get '/fancy-compliments' do
+  @compliment = COMPLIMENTS.sample
+
+  erb :compliment
+end
