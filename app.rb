@@ -35,6 +35,10 @@ get '/goodbye/:name' do
   "Goodbye, #{params[:name]}!"
 end
 
+get '/current-time' do
+  erb "<%= Time.now %>"
+end
+
 get '/template' do
   erb :index
 end
