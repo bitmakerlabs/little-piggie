@@ -11,8 +11,10 @@ COMPLIMENTS = [
 
 INSULTS = [
   'You fat.',
-  'You really fat',
-  'Seriously, you are fat.'
+  'You really fat.',
+  'Seriously, you are fat.',
+  'I fart in your general direction!',
+  'You have a good face for radio'
 ]
 
 get '/' do
@@ -47,4 +49,10 @@ get '/fancy-compliments' do
   @compliment = COMPLIMENTS.sample
 
   erb :compliment
+end
+
+get '/fancy-insults' do
+  @insult = INSULTS.sample
+
+  erb :insult, :layout => :app
 end
