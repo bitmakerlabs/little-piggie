@@ -28,5 +28,9 @@ get '/insults' do
 end
 
 get '/hello' do
-  "Hello, #{params[:name]}"
+  "Hello, #{params[:name]}!"
+end
+
+get '/goodbye/:name' do
+  "Goodbye, #{params[:name]}!"
 end
