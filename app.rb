@@ -17,6 +17,7 @@ INSULTS = [
   'You have a good face for radio'
 ]
 
+
 get '/' do
   'Hello World'
 end
@@ -60,6 +61,24 @@ end
 get '/piglatin/:word' do
   @word = params[:word]
   @result = piglatinize( @word )
+
+  erb :piglatinized, :layout => :app
+end
+
+get '/piglatin' do
+  erb :piglatin, :layout => :app
+end
+
+post '/piglatin' do
+  words = params[:words_to_convert]
+  piglatin_words = []
+
+  words.split(/\s+/).each do |w|
+    piglatin_words << piglatinize(w)
+  end
+
+  @word = words
+  @result = piglatin_words.join(' ')
 
   erb :piglatinized, :layout => :app
 end
