@@ -59,9 +59,15 @@ end
 
 get '/piglatin/:word' do
   @word = params[:word]
-  @word =~ /^([^aeiou]+)(.+)/i
-
-  @result = ($1 ? $2 + $1 + "ay" : @word + "ay")
+  @result = piglatinize( @word )
 
   erb :piglatinized, :layout => :app
+end
+
+
+def piglatinize(word)
+  word = word.strip
+
+  word =~ /^([^aeiou]+)(.+)/i
+  result = ($1 ? $2 + $1 + "ay" : word + "ay")
 end
