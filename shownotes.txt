@@ -1,0 +1,31 @@
+show notes:
+
+* first sinatra app:
+no routes, just:
+
+require 'sinatra'
+
+
+next: static hello world / complement
+
+next: randomly sampled complement
+
+add insults to show basic route matching
+
+we added a hello route to demonstrate query string parameters, and a result dependent on user input
+  => later on, show that /hello/ryan does NOT work
+
+we added a goodbye route that shows off named parameters
+
+routing in sinatra is pretty powerful and i encourage you to look at the documentation for sinatra to find out more. for example, there's something called splat which lets you match almost anything you can think of.
+
+added an erb string template indicating the current time. - what's erb for?
+how do you interpret ruby inside an erb string.
+
+add an erb template file.
+
+
+added fancy compliments - a barely styled erb page.
+
+added fancy insults - which uses a layout file and embeds the template inside
+

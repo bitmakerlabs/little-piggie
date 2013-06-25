@@ -38,6 +38,10 @@ get '/goodbye/:name' do
   "Goodbye, #{params[:name]}!"
 end
 
+get '/goodbye/:name/forever' do
+  "Goodbye, #{params[:name]}. Forever!"
+end
+
 get '/current-time' do
   erb "<%= Time.now %>"
 end
